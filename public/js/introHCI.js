@@ -41,10 +41,10 @@ function addProjectDetails(e) {
 	function sample(result){
 		console.log(result);
 
-		var newHtml = '<h2>' + result['title'] + '</h2>' +
+		var newHtml = '<img class="detailsImage" src="' + result['image'] + '" > ' + 
+		            '<h2>' + result['title'] + '</h2>' +
 					'<h5>' + result['date'] + '</h5>' +
-					'<p>' + result['summary'] + '</p>' +
-					'<img class="detailsImage" src="' + result['image'] + '" > ';
+					'<p>' + result['summary'] + '</p>' ;
 
 		var getSelector = "#" + projectID + " > .thumbnail > " + ".details";
 		$(getSelector).html(newHtml);
